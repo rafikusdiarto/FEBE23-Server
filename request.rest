@@ -35,3 +35,19 @@ Content-Type: application/json;
 
 ###
 DELETE http://localhost:5555/partners/6383acda66ef72d422529824
+
+
+###
+POST http://localhost:5555/blog/add-blog
+Content-Type: application/json;
+
+{
+    "img": "https://imgonline.netlify.app/img/page7.png",
+    "link": "https://ditsmp.kemdikbud.go.id/mengatasi-perundungan-di-sekolah-dengan-program-roots/"
+}
+
+###
+GET http://localhost:5555/blog
+
+###
+DELETE  http://localhost:5555/blog/6384f4df808b42b4fdf275a6
