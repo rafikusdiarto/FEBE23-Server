@@ -6,13 +6,17 @@ const PORT = 5555
 const {dbConnect} = require('./utils/dbConnect')
 require("dotenv").config(); 
 const partnersRoute = require('./routes/partnersRoute')
+const blogRoute = require('./routes/blogRoute')
+
 
 app.use(express.json())
 app.use(bodyParser.json()) 
 app.use(cors());
 dbConnect()
 
+app.use(blogRoute)
 app.use(partnersRoute)
+
 
 app.listen(PORT, () => {
     console.log("server running on PORT", PORT)
