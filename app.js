@@ -17,8 +17,9 @@ dbConnect()
 app.use(blogRoute)
 app.use(partnersRoute)
 
+
 app.get('/', (req, res) => {    
-    res.send('this is server')
+    res.send('this is my server')
 })
 
 app.listen(port, () => {
