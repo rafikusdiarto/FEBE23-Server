@@ -19,7 +19,7 @@ app.use(partnersRoute)
 
 
 app.get('/', (req, res) => {    
-    res.send('welcome to my server')
+    res.send('hello, welcome to my server')
 })
 
 app.listen(PORT, () => {
