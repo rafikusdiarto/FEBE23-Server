@@ -4,8 +4,7 @@ const app = express();
 const cors = require('cors')
 const {dbConnect} = require('./utils/dbConnect')
 require("dotenv").config(); 
-const partnersRoute = require('./routes/partnersRoute')
-const blogRoute = require('./routes/blogRoute')
+const allRouter = require('./routes/index')
 const port = process.env.PORT || 5555
 
 app.use(express.json())
@@ -13,9 +12,7 @@ app.use(bodyParser.json())
 app.use(cors());
 dbConnect()
 
-app.use(blogRoute)
-app.use(partnersRoute)
-
+app.use(allRouter)
 
 app.get('/', (req, res) => {    
     res.send('helloo, welcome to my server')
