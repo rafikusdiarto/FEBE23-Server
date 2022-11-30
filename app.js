@@ -6,7 +6,7 @@ const {dbConnect} = require('./utils/dbConnect')
 require("dotenv").config(); 
 const partnersRoute = require('./routes/partnersRoute')
 const blogRoute = require('./routes/blogRoute')
-const PORT = process.env.PORT || 5555
+const port = process.env.PORT || 5555
 
 app.use(express.json())
 app.use(bodyParser.json()) 
@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
     res.send('hello, welcome to my server')
 })
 
-app.listen(PORT, () => {
-    console.log(`server running on port ${PORT}`)
+app.listen(port, () => {
+    console.log(`server running on port ${port}`)
 })
 
 module.exports = app;
