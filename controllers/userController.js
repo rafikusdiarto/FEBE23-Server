@@ -15,7 +15,7 @@ const register = async (req, res, next) => {
       ['email', 'Your email is required'],
       ['username', 'Your username is required.'],
       ['password', 'A password is required'],
-      ['role', 'Your role is required']
+      // ['role', 'Your role is required']
     ]
 
     const { hasMissingProps, propErrors } = isBodyMissingProps(
