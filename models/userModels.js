@@ -20,7 +20,7 @@ const UserSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ["USER", "ADMIN"],
-      required: [true, "is required"]
+      // required: [true, "is required"]
     },
     salt: String,
     hash: String,

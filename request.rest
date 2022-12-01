@@ -53,5 +53,8 @@ Content-Type: application/json;
 GET http://localhost:5555/blog
 
 ###
-DELETE  http://localhost:5555/blog/6384f4df808b42b4fdf275a6
+DELETE  http://localhost:5555/blog/6384f4388075c3fb040799d6
 
+###
+POST 
+GET http://localhost:5555/blog
