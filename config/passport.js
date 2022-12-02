@@ -5,11 +5,12 @@ const User = require("../models/userModels")
 const userPassport = new Passport()
 userPassport.use(
   new LocalStrategy(
+    
     {
-      usernameField: "email",
+      usernameField: "username",
     },
-    function(email, password, done) {
-      User.findOne({ email })
+    function(username, password, done) {
+      User.findOne({ username })
         .then(function(user) {
           if (!user || !user.validPassword(password)) {
             return done(null, false, {
