@@ -5,6 +5,7 @@ const User = require("../models/userModels")
 const userPassport = new Passport()
 userPassport.use(
   new LocalStrategy(
+    
     {
       usernameField: "username",
     },
