@@ -67,7 +67,7 @@ const register = async (req, res, next) => {
 const login = async (req, res, next) => {
   try {
     const requiredProps = [
-      ['email', 'Your email is required to sign in'],
+      ['username', 'Your email is required to sign in'],
       ['password', 'A password is required to sign in'],
     ]
 
