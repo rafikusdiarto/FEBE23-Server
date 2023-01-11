@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(bodyParser.json()) 
 app.use(cors());
 dbConnect()
-
+    
 app.use(allRouter)
 
 app.get('/', (req, res) => {    

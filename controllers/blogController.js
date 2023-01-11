@@ -22,6 +22,16 @@ const getBlog = async (req,res) => {
     }
 }
 
+const updateBlog = async (req,res) => {
+    try {
+        const editBlog = await blog.updateOne({_id:req.params.id},{$set:req.body});
+        res.status(200).json(editBlog)
+        console.log("edit data blog berhasil")
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
 const deleteBlog = async (req,res) => {
     try {
         const deleteData = await blog.deleteOne({_id:req.params.id})
@@ -35,5 +45,6 @@ const deleteBlog = async (req,res) => {
 module.exports = {
     addBlog,
     getBlog,
+    updateBlog,
     deleteBlog
 }

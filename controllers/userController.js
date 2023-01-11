@@ -2,13 +2,22 @@ const User = require('../models/userModels')
 const isBodyMissingProps = require('../utils/validation')
 const { userPassport } = require('../config/passport')
 
+const getUser = async (req,res) => {
+  try {
+      const response = await User.find();
+      res.status(200).json(response);
+      console.log("sukses mendapatkan data user")
+  } catch (error) {
+      console.log(error.message)
+  }
+};
+
 const register = async (req, res, next) => {
   try {
     const {
       email,
       username,
       password,
-      role,
     } = req.body
 
     const requiredProps = [
@@ -45,7 +54,6 @@ const register = async (req, res, next) => {
     const user = new User({
       email,
       username,
-      role,
     })
 
     user.setPassword(password)
@@ -67,7 +75,7 @@ const register = async (req, res, next) => {
 const login = async (req, res, next) => {
   try {
     const requiredProps = [
-      ['username', 'Your email is required to sign in'],
+      ['username', 'Your username is required to sign in'],
       ['password', 'A password is required to sign in'],
     ]
 
@@ -101,6 +109,7 @@ const login = async (req, res, next) => {
 }
 
 module.exports = {
+  getUser,
   register,
   login,
 }

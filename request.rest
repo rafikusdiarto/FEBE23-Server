@@ -1,43 +1,53 @@
 GET http://localhost:5555/partners
 
 ###
-GET http://localhost:5555/partners/6383ab1a66ef72d422529822
+GET http://localhost:5555/partners/63ad9908a472e15d3f47bf59
 
 ###
 POST http://localhost:5555/partners/add-partner
 Content-Type: application/json;
 
 {
-    "nama" : "Putri Citra, M. Psi.",
-    "rate" : "8",
-    "overview" : "Putri Citra adalah psikolog yang dapat menangani permasalahan kecemasan dan relasi.Ia yakin bahwa proses kehidupan adalah pencarian jati diri.Membicarakan kekhawatiran kita dengan seorang profesional bisa menjadi langkah yang sangat berarti.",
-    "pengalaman" : "Psikolog di RS Panama 4 tahun",
-    "pendidikan1" : "S-1 Psikologi Universitas Atma Jaya Yogyakarta",
-    "pendidikan2" : "S-2 Psikologi Universitas Negeri Malang",
-    "contact" : "089637074190",
-    "img" : "https://img.freepik.com/free-photo/portrait-young-asia-lady-with-positive-expression-arms-crossed-smile-broadly-dressed-casual-clothing-looking-camera-pink-background_7861-3201.jpg?w=996&t=st=1669560720~exp=1669561320~hmac=8efde1a5486603633e5320165f380934b4a8be566b8e200ab47c16dbc2cb9b0e"
+    "nama": "Jennie, M. Psi.",
+    "rate": "7.5",
+    "kota": "Jember",
+    "overview": "Putri Citra adalah psikolog yang dapat menangani permasalahan kecemasan dan relasi.Ia yakin bahwa proses kehidupan adalah pencarian jati diri.Membicarakan kekhawatiran kita dengan seorang profesional bisa menjadi langkah yang sangat berarti.",
+    "pengalaman": "Psikolog di RS Panama 4 tahun",
+    "pendidikan1": "S-1 Psikologi Universitas Atma Jaya Yogyakarta",
+    "pendidikan2": "S-2 Psikologi Universitas Negeri Malang",
+    "contact": "089637074190",
+    "img": "https://img.freepik.com/free-photo/portrait-young-asia-lady-with-positive-expression-arms-crossed-smile-broadly-dressed-casual-clothing-looking-camera-pink-background_7861-3201.jpg?w=996&t=st=1669560720~exp=1669561320~hmac=8efde1a5486603633e5320165f380934b4a8be566b8e200ab47c16dbc2cb9b0e"
 }
 
 ###
-PATCH http://localhost:5555/partners/edit-partner/6383ab1a66ef72d422529822
+PATCH http://localhost:5555/partners/edit-partner/63bded6ea02405e8a3b831f7
 Content-Type: application/json;
 
 {
-    "nama" : "Tasya Aulia,M.Psi.",
-    "rate" : "8",
-    "overview" : "Tasya Aulia merupakan psikolog pendidikan lulusan Universitas Indonesia.  Tasya mempunyai minat pada isu pola asuh, pendidikan anak usia dini, pengembangan diri, dan masalah remaja. Kasus yang biasa ditangani erat kaitannya dengan parenting dan isu pendidikan. Selain aktif sebagai associate di Ibunda.id,  ia juga aktif sebagai pembicara dalam seminar yang dilakukan online serta menjadi content creator pada instagram Parentsroom, guna psikoedukasi terkait parenting.",
-    "pengalaman" : "Psikolog di RS Panama 4 tahun",
-    "pendidikan1" : "S-1 Psikologi Universitas Bina Nusantara",
-    "pendidikan2" : "S-2 Magister Psikologi Universitas Indonesia",
-    "contact" : "089637074190",
-    "img" : "https://img.freepik.com/free-photo/smiling-cute-asian-female-doctor-nurse-medical-respirator-rubber-sterile-gloves-looking-pleas_1258-83289.jpg?w=996&t=st=1669187240~exp=1669187840~hmac=bda4bc7e9daf9ef8049685a8f0b480893a52393e0d9fb5cc674f5aa9ec43410e"
+    "nama": "Sally, M. Psi.",
+    "rate": "7.5",
+    "kota": "Jember",
+    "overview": "Putri Citra adalah psikolog yang dapat menangani permasalahan kecemasan dan relasi.Ia yakin bahwa proses kehidupan adalah pencarian jati diri.Membicarakan kekhawatiran kita dengan seorang profesional bisa menjadi langkah yang sangat berarti.",
+    "pengalaman": "Psikolog di RS Panama 4 tahun",
+    "pendidikan1": "S-1 Psikologi Universitas Atma Jaya Yogyakarta",
+    "pendidikan2": "S-2 Psikologi Universitas Negeri Malang",
+    "contact": "089637074190",
+    "img": "https://img.freepik.com/free-photo/portrait-young-asia-lady-with-positive-expression-arms-crossed-smile-broadly-dressed-casual-clothing-looking-camera-pink-background_7861-3201.jpg?w=996&t=st=1669560720~exp=1669561320~hmac=8efde1a5486603633e5320165f380934b4a8be566b8e200ab47c16dbc2cb9b0e"
 }
 
 ###
-DELETE http://localhost:5555/partners/6383acda66ef72d422529824
+DELETE http://localhost:5555/partners/63bded6ea02405e8a3b831f7
+
+###
+GET http://localhost:5555/partners/lokasi/surabaya
+
+###
+GET http://localhost:5555/partners/search/putri
 
 
 
+
+//BLOG
 
 ###
 POST http://localhost:5555/blog/add-blog
@@ -52,8 +62,39 @@ Content-Type: application/json;
 GET http://localhost:5555/blog
 
 ###
-DELETE  http://localhost:5555/blog/6384f4388075c3fb040799d6
+PATCH http://localhost:5555/blog/edit-blog/638954f1835ca630234c221f
+Content-Type: application/json;
+
+{
+    "img": "https://imgonline.netlify.app/img/page7.png",
+    "link": "https://ditsmp.kemdikbud.go.id/mengatasi-perundungan-di-sekolah-dengan-program-roots/"
+}
 
 ###
-POST 
-GET http://localhost:5555/blog
+DELETE  http://localhost:5555/blog/638954f1835ca630234c221f
+
+
+
+//USER
+
+###
+GET http://localhost:5555/users/data-user
+
+###
+POST http://localhost:5555/users/register
+Content-Type: application/json;
+
+{
+    "email": "rafikusdiarto@gmail.com",
+    "username": "Rafi Kusdiarto",
+    "password": "345bcd"
+}
+
+###
+POST http://localhost:5555/users/login
+Content-Type: application/json;
+
+{
+    "username": "m rafi",
+    "password": "abc123"
+}

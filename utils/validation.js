@@ -16,4 +16,3 @@ function isBodyMissingProps(requiredProps = [], body) {
   }
   
   module.exports = isBodyMissingProps
-  

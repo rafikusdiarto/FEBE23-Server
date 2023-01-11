@@ -5,7 +5,6 @@ const User = require("../models/userModels")
 const userPassport = new Passport()
 userPassport.use(
   new LocalStrategy(
-    
     {
       usernameField: "username",
     },
@@ -15,7 +14,7 @@ userPassport.use(
           if (!user || !user.validPassword(password)) {
             return done(null, false, {
               name: 'UnauthorizedError',
-              message: 'The email or password is incorrect.'
+              message: 'The username or password is incorrect.'
             })
           }
           return done(null, user)

@@ -10,6 +10,10 @@ const partnerSchema = new Schema({
         type: String,
         required: true
     },
+    kota:{
+        type: String,
+        required: true
+    },
     overview:{
         type: String,
         required: true
